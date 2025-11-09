@@ -3,6 +3,7 @@ import { supabase } from "@/lib/supabaseClient";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
+import { LogOutIcon } from "lucide-react";
 
 export default function Home() {
   const [user, setUser] = useState(null);
@@ -38,7 +39,7 @@ export default function Home() {
                 {user.email}
               </span>
             )}
-            <Button variant="outline" onClick={handleLogout}>
+            <Button variant="outline" onClick={handleLogout} style={{backgroundColor: 'grey'}}>
               Logout
             </Button>
           </div>
@@ -56,7 +57,7 @@ export default function Home() {
 
         {/* Feature Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <Card>
+          <Card >
             <CardHeader>
               <CardTitle>Mentorship</CardTitle>
             </CardHeader>
@@ -65,7 +66,7 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card onClick="">
             <CardHeader>
               <CardTitle>Portfolio Reviews</CardTitle>
             </CardHeader>
@@ -74,7 +75,7 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card onClick="">
             <CardHeader>
               <CardTitle>Career Guidance</CardTitle>
             </CardHeader>
