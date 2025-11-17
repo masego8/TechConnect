@@ -1,9 +1,15 @@
+
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { LogOutIcon } from "lucide-react";
+
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "../components/admin-dashboard/components/app-sidebar";
+import { SectionCards } from "../components/admin-dashboard/components/section-cards";
+import { SiteHeader } from "../components/admin-dashboard/components/site-header";
 
 export default function Home() {
   const [user, setUser] = useState(null);
@@ -50,51 +56,30 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="flex-1 max-w-6xl mx-auto w-full px-6 py-12">
-        <section className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-2">Welcome to TechConnect 👋</h2>
-          <p className="text-muted-foreground">
-            Connect with mentors, explore projects, and grow your tech career.
-          </p>
-        </section>
+     <SidebarProvider
+          className="min-h-auto"
+          style={
+            {
+              "--sidebar-width": "calc(var(--spacing) * 64)",
+              "--header-height": "calc(var(--spacing) * 12 + 1px)"
+            }
+          }>
+          <AppSidebar variant="sidebar" />
+          <SidebarInset>
+            <SiteHeader />
+            <div className="flex flex-1 flex-col">
+              <div className="@container/main flex flex-1 flex-col gap-2">
+                <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+                  <SectionCards />
+                </div>
+              </div>
+            </div>
+          </SidebarInset>
+        </SidebarProvider>
 
-        {/* Feature Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 w-full">
-          
-          <Card onClick={mentorNav} className="cursor-pointer hover:bg-accent transition">
-            <CardHeader>
-              <CardTitle>Mentorship</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>Find experienced developers and get one-on-one mentorship.</p>
-            </CardContent>
-          </Card>
-          
-          <Card onClick="" className="cursor-pointer hover:bg-accent transition">
-            <CardHeader>
-              <CardTitle>Portfolio Reviews</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>Get your projects reviewed and receive valuable feedback.</p>
-            </CardContent>
-          </Card>
-          
-          <Card onClick="" className="cursor-pointer hover:bg-accent transition">
-            <CardHeader>
-              <CardTitle>Career Guidance</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>Access resources and tips to take your tech career further.</p>
-            </CardContent>
-          </Card>
-        </div>
-      </main>
+      
 
-      {/* Footer */}
-      <footer className="border-t mt-12 py-6 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} TechConnect. All rights reserved.
-      </footer>
+      
     </div>
   );
 }
