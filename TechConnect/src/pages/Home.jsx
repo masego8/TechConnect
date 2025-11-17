@@ -27,11 +27,15 @@ export default function Home() {
     navigate("/login");
   };
 
+  function mentorNav(){
+    navigate("/mentorship");
+  }
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navbar */}
       <header className="border-b bg-background/60 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <div className="max-w-6x1 mx-auto flex justify-between items-center p-4">
           <h1 className="text-2xl font-bold text-primary">TechConnect</h1>
           <div className="flex items-center gap-4">
             {user && (
@@ -56,8 +60,9 @@ export default function Home() {
         </section>
 
         {/* Feature Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <Card >
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 w-full">
+          
+          <Card onClick={mentorNav} className="cursor-pointer hover:bg-accent transition">
             <CardHeader>
               <CardTitle>Mentorship</CardTitle>
             </CardHeader>
@@ -65,8 +70,8 @@ export default function Home() {
               <p>Find experienced developers and get one-on-one mentorship.</p>
             </CardContent>
           </Card>
-
-          <Card onClick="">
+          
+          <Card onClick="" className="cursor-pointer hover:bg-accent transition">
             <CardHeader>
               <CardTitle>Portfolio Reviews</CardTitle>
             </CardHeader>
@@ -74,8 +79,8 @@ export default function Home() {
               <p>Get your projects reviewed and receive valuable feedback.</p>
             </CardContent>
           </Card>
-
-          <Card onClick="">
+          
+          <Card onClick="" className="cursor-pointer hover:bg-accent transition">
             <CardHeader>
               <CardTitle>Career Guidance</CardTitle>
             </CardHeader>
