@@ -7,7 +7,7 @@ import {
   SidebarMenu,
   SidebarMenuItem
 } from "@/components/ui/sidebar";
-import { IconInnerShadowTop, IconDashboard, IconListDetails, IconChartBar, IconFolder, IconSearch, IconHome, IconHandGrab, IconUser } from "@tabler/icons-react";
+import { IconInnerShadowTop, IconDashboard, IconListDetails, IconChartBar, IconFolder, IconSearch, IconHome, IconHandGrab, IconUser, IconChairDirector } from "@tabler/icons-react";
 import { NavMain } from "./nav-main";
 
 
@@ -18,6 +18,7 @@ const data = {
     { title: "Connections", url: "/wip", icon: IconHandGrab},
     { title: "Profile",     url: "/profile",     icon: IconUser },
     { title: "Projects",    url: "/wip",    icon: IconFolder },
+    { title: "Mentorships",    url: "/mentorship",    icon: IconChairDirector },
     { title: "Search",    url: "/wip",    icon: IconSearch },
   ],
 };
