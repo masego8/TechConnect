@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Mentorship from "./pages/Mentorship"
 import Profile from "./pages/Profile";
 import UnderConstruction from "./pages/UnderConstruction";
+import Connections from "./pages/Connections";
 
 
 
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/mentorship" element={<Mentorship />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/wip" element={<UnderConstruction />} />
+        <Route path="/connections" element={<Connections />} />
       </Routes>
     </BrowserRouter>
   );

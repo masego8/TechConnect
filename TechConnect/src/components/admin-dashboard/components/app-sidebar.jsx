@@ -15,7 +15,7 @@ const data = {
 
   navMain: [
     { title: "Home",        url: "/",            icon: IconHome },
-    { title: "Connections", url: "/wip", icon: IconHandGrab},
+    { title: "Connections", url: "/connections", icon: IconHandGrab},
     { title: "Profile",     url: "/profile",     icon: IconUser },
     { title: "Projects",    url: "/wip",    icon: IconFolder },
     { title: "Mentorships",    url: "/mentorship",    icon: IconChairDirector },
