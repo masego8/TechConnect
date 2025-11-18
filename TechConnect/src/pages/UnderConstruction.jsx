@@ -29,9 +29,6 @@ export default function UnderConstruction() {
 
         {/* Action buttons */}
         <div className="flex gap-3 mt-6">
-          <Button onClick={() => navigate(-1)} variant="outline">
-            Go Back
-          </Button>
           <Button onClick={() => navigate("/home")}>
             Return Home
           </Button>

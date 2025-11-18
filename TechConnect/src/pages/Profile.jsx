@@ -74,9 +74,8 @@ export default function Page() {
         bio={bio}
         location={location}
       />
-
       {/* 🔵 Content edits the same data */}
-      <ProfileContent
+      <ProfileContent 
         firstName={firstName}
         lastName={lastName}
         email={email}
