@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SignupForm } from "@/components/signup-form";
+import SignupForm from "@/components/signup-form";
 import { supabase } from "@/lib/supabaseClient";
 
 export default function SignUp() {
