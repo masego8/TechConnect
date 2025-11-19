@@ -6,6 +6,7 @@ import Mentorship from "./pages/Mentorship"
 import Profile from "./pages/Profile";
 import UnderConstruction from "./pages/UnderConstruction";
 import Connections from "./pages/Connections";
+import SearchPage from "./pages/Search";
 
 
 
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/wip" element={<UnderConstruction />} />
         <Route path="/connections" element={<Connections />} />
+        <Route path="/search" element={<SearchPage />} />
       </Routes>
     </BrowserRouter>
   );

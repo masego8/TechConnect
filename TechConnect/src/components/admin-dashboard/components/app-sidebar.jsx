@@ -19,7 +19,7 @@ const data = {
     { title: "Profile",     url: "/profile",     icon: IconUser },
     { title: "Projects",    url: "/wip",    icon: IconFolder },
     { title: "Mentorships",    url: "/mentorship",    icon: IconChairDirector },
-    { title: "Search",    url: "/wip",    icon: IconSearch },
+    { title: "Search",    url: "/search",    icon: IconSearch },
   ],
 };
 

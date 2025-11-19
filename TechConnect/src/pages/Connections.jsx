@@ -51,7 +51,7 @@ export default function ConnectionsPage() {
         if (ids.size > 0) {
           const { data: profiles, error: profileError } = await supabase
             .from("profiles")
-            .select("id, first_name, last_name, job_title, location, avatar_url")
+            .select("id, first_name, last_name, location")
             .in("id", Array.from(ids));
 
           if (profileError) throw profileError;
