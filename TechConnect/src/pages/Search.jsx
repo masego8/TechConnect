@@ -122,7 +122,7 @@ export default function SearchPage() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto py-10 space-y-6">
+    <div className="w-full max-w-3xl mt-10 mx-10 min-h-screen flex flex-col justify-top space-y-6">
       <h1 className="text-3xl font-bold">Find People</h1>
 
       <div className="flex gap-3">
